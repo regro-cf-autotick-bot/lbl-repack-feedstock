@@ -1,5 +1,5 @@
 {% set name = "lbl-repack" %}
-{% set version = "1.4.4" %}
+{% set version = "1.4.5" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lbl-repack-{{ version }}.tar.gz
-  sha256: 2d9d89604c30795c89fba54a7ff423f868d1645ef3bf2ee53141220b409b4507
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 5832c9bf28bd4a77426479cc6d6fc2a069a87b50b89715cd819d9a0de653ed32
 
 build:
-  number: 5
+  number: 0
   skip: true  # [win]
   skip: true  # [py<35]
   entry_points:
